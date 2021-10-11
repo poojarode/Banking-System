@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(../img/bank1.jpg);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 5px 90px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid #fff;
+}
+nav .logo{
+    padding: 29px 20px;
+    height: 80px;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+nav img{
+    padding: 0px 0px;
+    height: 90px;
+    width: 90px;
+    float: left;
+    
+}
+nav ul{
+    list-style: none;
+    float: right;
+    margin: 8px;
+    padding: 8px;
+    display: flex;
+}
+nav ul li a{
+    line-height: 80px;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+nav ul li a:hover {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 6px;
+}
+
+/* Sicky footer */
+
+.sticky-footer #footer{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 2px 90px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid #fff;
+}
+.sticky-footer ul{
+    list-style: none;
+    float: left;
+    margin: 8px;
+    padding: 8px;
+    display: flex;
+}
+
+.sticky-footer ul li a{
+    line-height: 80px;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.sticky-footer p{
+  
+    padding-top: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: black;
+}
+.sticky-footer p a{
+    color: #fff;
+    padding-top: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: black;
+    
+}
+
+.sticky-footer{
+    position: sticky;
+    top: 100%;
+}

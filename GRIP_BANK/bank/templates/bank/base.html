@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}
+               GRIP Bank   <!-- default title -->
+            {% endblock %}
+        </title>
+        <link rel="stylesheet" href="{% static 'bank/css/style.css' %}">
+        {% block style %}
+
+        {% endblock %}
+    </head>
+    <body>
+        <!-- Start of the nav bar -->
+        <section class="nav">
+        <nav>
+            <img src="{% static 'bank/img/logo.jpg' %}"> <div class="logo">GRIP Banking System</div>
+            <ul>
+                <li><a href="{% url 'index'%}">Home</a></li>
+                <li><a href="{% url 'transaction'%}">Transactions</a></li>
+                <li><a href="{% url 'customers'%}">Customers</a></li>
+                <li><a href="{% url 'transfer'%}">Transfer</a></li>
+                <!--li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li-->
+            </ul>
+        </nav>
+        <section id="sect"></section>
+    </section>
+    <!-- End of the nav bar -->
+    {% block content%}
+    <!--code related to this tag goes here... Bravo !!-->
+    {% endblock %}
+<!-- Start of the footer -->
+<!--div id="bottom">
+ <footer class="sticky-footer">
+     <div id="footer">
+            
+           <p> <a href="#">visit GRIP</a><br>
+            @Copyright Pooja 2021</p>
+        </div>
+</footer>
+</div>
+<End of the footer -->
+    </body>
+</html>

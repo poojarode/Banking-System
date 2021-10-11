@@ -1,0 +1,73 @@
+{% extends 'bank/base.html' %}
+{% load static %}
+{% block title %} GRIP Home {%endblock%}
+{% block style%}
+<style>
+	form{
+		background: rgba(0, 0, 0, 0.6);
+		width: 400px;
+		margin-left: auto;
+		margin-right: 150px;
+		text-align: center;
+		border: 1px solid #ccc;
+		margin-bottom: 20px;
+		margin-top: 50px;
+	}
+	#form-heading{
+		font-size: 25px;
+		padding-top: 10px;
+		padding-bottom: 20px;
+		color: rgb(50, 146, 55);
+	}
+	
+	#input-wrapper{
+		padding-top: 50px;
+		padding-bottom: 5px;
+		padding-left: 70px;
+		padding-right: 70px;
+	}
+	#btn-submit{
+		background-color: rgb(50, 146, 55);
+		padding-top: 12px;
+		padding-bottom: 12px;
+		padding-left: 24px;
+		padding-right: 24px;
+		font-size: 18px;
+		color: white;
+		border: none;
+	}
+	.input-box{
+		color:#fff;
+		background: rgba(0, 0, 0, 0.1);
+		font-size: 20px;
+		padding-bottom: 15px;
+		margin-bottom: 15px;
+		border: 0;
+		width: 100%; 
+		
+	}
+</style>
+{%endblock%}
+{% block content %}
+<form id="form-heading" action="register" method="POST" name="form">
+	<h1> Register </h1>
+	{% csrf_token %}
+	<div id="input-wrapper">
+		<div>
+			<input class="input-box" type="text" name="name" placeholder="Your Name" required>
+		</div>
+		<div>
+			<input class="input-box" type="email" name="email" placeholder="Email" required>
+		</div>
+		<div>
+			<input class="input-box" type="number" name="bankno" placeholder="Bank Number" required>
+		</div>
+		
+		<div>
+			<input class="input-box" type="number" name="balance" placeholder="Balance" required>
+		</div>
+		
+		<input id="btn-submit" type="submit" name="submit" value="Register">
+	</div>
+</form>
+{%endblock%}

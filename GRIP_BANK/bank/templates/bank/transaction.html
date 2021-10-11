@@ -1,0 +1,68 @@
+{% extends 'bank/base.html' %}
+{% load static %}
+
+{% block title %} Transactions {%endblock%}
+{% block style%}
+<style>
+    body{
+      background: url("{% static 'bank/img/bank3.jpg' %}");
+      background-position: center;
+      background-size: cover;
+    }
+    .styled-table {
+        border-collapse: collapse;
+        margin: 50px 20px 10px; 
+        font-size: 25px;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(31, 32, 31, 0.9);
+        
+    }
+    .styled-table thead tr {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: left;
+    }
+    .styled-table th,
+    .styled-table td {
+        padding: 15px 15px;
+    }
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+    
+   
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+    }
+    .styled-table{
+        background:rgba(70, 66, 66, 0.6);
+    } 
+</style>
+{%endblock%}
+{% block content %}
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Bank Number</th>
+            <th>Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for c in customer %}
+        <tr>
+            <td>{{ c.name }}</td>
+            <td>{{ c.email }}</td>
+            <td>{{ c.bankno }}</td>
+            <td>Rs. {{ c.balance }}</td>
+        </tr>
+        
+        {% endfor %}
+        <!-- and so on... -->
+    </tbody>
+</table>
+
+{%endblock%}

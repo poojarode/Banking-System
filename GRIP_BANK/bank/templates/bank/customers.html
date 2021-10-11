@@ -1,0 +1,70 @@
+{% extends 'bank/base.html' %}
+{% load static %}
+{% block title %} Customers {%endblock%}
+{% block style%}
+<style>
+        body{
+                background-image: url("{% static 'bank/img/blogging.webp' %}");
+                background-color: rgb(36, 187, 74);
+                background-size: cover;
+
+
+        }
+        a{
+                color: rgb(10, 2, 2);
+                text-anchor: unset;
+        }
+    .styled-table {
+        border-collapse: collapse;
+        margin: 10px 10px 20px; 
+        font-size: 24px;
+        font-family: sans-serif;
+        width: 100%;
+        box-shadow: 0 0 20px;
+        background-color: wheat;
+        
+    }
+    .styled-table thead tr {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: left;
+    }
+    .styled-table th,
+    .styled-table td {
+        padding: 15px 15px;
+    }
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+    
+   
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+    }
+    .styled-table{
+        background-color: rgba(228, 220, 228, 0.5);
+    } 
+</style>
+{%endblock%}
+{% block content %}
+
+<table class="styled-table">
+        <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Balance</th>
+                    </tr>
+                    </thead>
+    <tbody>
+        {% for c in customer %}
+        <tr><td>
+             <a href="#">{{ c.name }}</a></td>
+            <td>Rs. {{c.balance}}</td>
+        </tr>
+        
+        {% endfor %}
+        <!-- and so on... -->
+    </tbody>
+</table>
+
+{%endblock%}
